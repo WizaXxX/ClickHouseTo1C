@@ -1,0 +1,639 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<Width>50</Width>
+	<Height>23</Height>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьЗапрос" id="6">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыполнитьЗапрос</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьЗапросРасширеннаяПодсказка" id="7"/>
+			</Button>
+			<Button name="ФормаПеренестиВОтчет" id="1">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПеренестиВОтчет</CommandName>
+				<ExtendedTooltip name="ФормаПеренестиВОтчетРасширеннаяПодсказка" id="2"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппировкаГоризонтальная" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка горизонтальная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группировка горизонтальная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппировкаГоризонтальнаяРасширеннаяПодсказка" id="12"/>
+			<ChildItems>
+				<InputField name="ТекстЗапроса" id="3">
+					<DataPath>ТекстЗапроса</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<MultiLine>true</MultiLine>
+					<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="4"/>
+					<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="5"/>
+				</InputField>
+				<UsualGroup name="ГруппировкаВертикальная" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группировка вертикальная</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группировка вертикальная</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппировкаВертикальнаяРасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<Button name="ПолучитьСписокБаз" id="15">
+							<Type>UsualButton</Type>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<CommandName>Form.Command.ПолучитьСписокБаз</CommandName>
+							<ExtendedTooltip name="ПолучитьСписокБазРасширеннаяПодсказка" id="16"/>
+						</Button>
+						<UsualGroup name="ГруппаБазаТаблицы" id="25">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа база таблицы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа база таблицы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаБазаТаблицыРасширеннаяПодсказка" id="26"/>
+							<ChildItems>
+								<InputField name="ИмяБазы" id="17">
+									<DataPath>ИмяБазы</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<DropListButton>true</DropListButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование базы</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ИмяБазыКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="ИмяБазыРасширеннаяПодсказка" id="19"/>
+								</InputField>
+								<Button name="ПолучитьСписокТаблиц" id="20">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучитьСписокТаблиц</CommandName>
+									<ExtendedTooltip name="ПолучитьСписокТаблицРасширеннаяПодсказка" id="21"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТаблицаОписание" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица описание</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблица описание</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТаблицаОписаниеРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<InputField name="ИмяТаблицы" id="22">
+									<DataPath>ИмяТаблицы</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<DropListButton>true</DropListButton>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Наименование таблицы</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ИмяТаблицыКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ИмяТаблицыРасширеннаяПодсказка" id="24"/>
+								</InputField>
+								<Button name="ПолучитьОписаниеТаблицы" id="29">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПолучитьОписаниеТаблицы</CommandName>
+									<ExtendedTooltip name="ПолучитьОписаниеТаблицыРасширеннаяПодсказка" id="30"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппировкаПоказатели" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группировка показатели</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группировка показатели</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппировкаПоказателиРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаПоказателиПерваяКолонка" id="45">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа показатели первая колонка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа показатели первая колонка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоказателиПерваяКолонкаРасширеннаяПодсказка" id="46"/>
+									<ChildItems>
+										<LabelField name="СтрокПрочитано" id="31">
+											<DataPath>ПрочитаноСтрок</DataPath>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<Width>17</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="СтрокПрочитаноКонтекстноеМеню" id="32"/>
+											<ExtendedTooltip name="СтрокПрочитаноРасширеннаяПодсказка" id="33"/>
+										</LabelField>
+										<LabelField name="ПрочитаноБайт" id="34">
+											<DataPath>ПрочитаноБайт</DataPath>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<Width>17</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ПрочитаноБайтКонтекстноеМеню" id="35"/>
+											<ExtendedTooltip name="ПрочитаноБайтРасширеннаяПодсказка" id="36"/>
+										</LabelField>
+										<LabelField name="КоличествоСтрок" id="40">
+											<DataPath>КоличествоСтрок</DataPath>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<Width>17</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="КоличествоСтрокКонтекстноеМеню" id="41"/>
+											<ExtendedTooltip name="КоличествоСтрокРасширеннаяПодсказка" id="42"/>
+										</LabelField>
+										<LabelField name="ОбщееВремяВыполнения" id="58">
+											<DataPath>ОбщееВремяВыполнения</DataPath>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<Width>17</Width>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ОбщееВремяВыполненияКонтекстноеМеню" id="59"/>
+											<ExtendedTooltip name="ОбщееВремяВыполненияРасширеннаяПодсказка" id="60"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПоказателиВтораяКолонка" id="47">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа показатели вторая колонка</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа показатели вторая колонка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПоказателиВтораяКолонкаРасширеннаяПодсказка" id="48"/>
+									<ChildItems>
+										<LabelField name="ПрочитаноВремя" id="37">
+											<DataPath>ПрочитаноВремя</DataPath>
+											<Width>19</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ПрочитаноВремяКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="ПрочитаноВремяРасширеннаяПодсказка" id="39"/>
+										</LabelField>
+										<LabelField name="ВремяВыполненияHTTP" id="49">
+											<DataPath>ВремяВыполненияHTTP</DataPath>
+											<Width>19</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ВремяВыполненияHTTPКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="ВремяВыполненияHTTPРасширеннаяПодсказка" id="51"/>
+										</LabelField>
+										<LabelField name="ВремяЧтенияJSON" id="52">
+											<DataPath>ВремяЧтенияJSON</DataPath>
+											<Width>19</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ВремяЧтенияJSONКонтекстноеМеню" id="53"/>
+											<ExtendedTooltip name="ВремяЧтенияJSONРасширеннаяПодсказка" id="54"/>
+										</LabelField>
+										<LabelField name="ВремяПреобразованияJSON" id="55">
+											<DataPath>ВремяПреобразованияJSON</DataPath>
+											<Width>19</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+												</v8:item>
+											</Format>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="ВремяПреобразованияJSONКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ВремяПреобразованияJSONРасширеннаяПодсказка" id="57"/>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<SpreadSheetDocumentField name="Результат" id="8">
+			<DataPath>Результат</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<TitleLocation>None</TitleLocation>
+			<ContextMenu name="РезультатКонтекстноеМеню" id="9"/>
+			<ExtendedTooltip name="РезультатРасширеннаяПодсказка" id="10"/>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ТекстЗапроса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст запроса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Результат" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяБазы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя базы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяТаблицы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочитаноСтрок" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитано строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочитаноБайт" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитано байт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПрочитаноВремя" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время выполнения CH</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>10</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоСтрок" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество строк</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Время" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяВыполненияHTTP" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время выполнения HTTP</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>10</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяЧтенияJSON" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время чтения JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>10</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяПреобразованияJSON" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Время преобразования JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>10</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОбщееВремяВыполнения" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Общее время выполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>10</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПеренестиВОтчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в отчет и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВОтчет</Action>
+		</Command>
+		<Command name="ВыполнитьЗапрос" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить запрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьЗапрос</Action>
+		</Command>
+		<Command name="ПолучитьСписокБаз" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить список баз</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить список баз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСписокБаз</Action>
+		</Command>
+		<Command name="ПолучитьСписокТаблиц" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить список таблиц</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить список таблиц</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.NestedTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьСписокТаблиц</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПолучитьОписаниеТаблицы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить описание таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить описание таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ExternalDataSourceCubeDimensionTable</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьОписаниеТаблицы</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>
