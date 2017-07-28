@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
-	<Width>50</Width>
-	<Height>23</Height>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаВыполнитьЗапрос" id="6">
@@ -43,6 +42,7 @@
 					<DataPath>ТекстЗапроса</DataPath>
 					<TitleLocation>None</TitleLocation>
 					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>true</HorizontalStretch>
 					<MultiLine>true</MultiLine>
 					<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="5"/>
@@ -89,6 +89,12 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаБазаТаблицыРасширеннаяПодсказка" id="26"/>
 							<ChildItems>
+								<CheckBoxField name="ЗаполнятьПоля" id="86">
+									<DataPath>ЗаполнятьПоля</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ЗаполнятьПоляКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ЗаполнятьПоляРасширеннаяПодсказка" id="88"/>
+								</CheckBoxField>
 								<InputField name="ИмяБазы" id="17">
 									<DataPath>ИмяБазы</DataPath>
 									<TitleLocation>None</TitleLocation>
@@ -149,193 +155,294 @@
 								</Button>
 							</ChildItems>
 						</UsualGroup>
-						<UsualGroup name="ГруппировкаПоказатели" id="43">
+						<Pages name="СтраницыПоказателиПоля" id="61">
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группировка показатели</v8:content>
+									<v8:content>Страницы показатели поля</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Группировка показатели</v8:content>
+									<v8:content>Страницы показатели поля</v8:content>
 								</v8:item>
 							</ToolTip>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппировкаПоказателиРасширеннаяПодсказка" id="44"/>
+							<ExtendedTooltip name="СтраницыПоказателиПоляРасширеннаяПодсказка" id="62"/>
 							<ChildItems>
-								<UsualGroup name="ГруппаПоказателиПерваяКолонка" id="45">
+								<Page name="СтраницаПоказатели" id="63">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа показатели первая колонка</v8:content>
+											<v8:content>Показатели</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа показатели первая колонка</v8:content>
+											<v8:content>Страница показатели</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаПоказателиПерваяКолонкаРасширеннаяПодсказка" id="46"/>
+									<ExtendedTooltip name="СтраницаПоказателиРасширеннаяПодсказка" id="64"/>
 									<ChildItems>
-										<LabelField name="СтрокПрочитано" id="31">
-											<DataPath>ПрочитаноСтрок</DataPath>
-											<HorizontalAlign>Left</HorizontalAlign>
-											<Width>17</Width>
-											<Format>
+										<UsualGroup name="ГруппировкаПоказатели" id="43">
+											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>ЧН=0</v8:content>
+													<v8:content>Группировка показатели</v8:content>
 												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="СтрокПрочитаноКонтекстноеМеню" id="32"/>
-											<ExtendedTooltip name="СтрокПрочитаноРасширеннаяПодсказка" id="33"/>
-										</LabelField>
-										<LabelField name="ПрочитаноБайт" id="34">
-											<DataPath>ПрочитаноБайт</DataPath>
-											<HorizontalAlign>Left</HorizontalAlign>
-											<Width>17</Width>
-											<Format>
+											</Title>
+											<ToolTip>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>ЧН=0</v8:content>
+													<v8:content>Группировка показатели</v8:content>
 												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ПрочитаноБайтКонтекстноеМеню" id="35"/>
-											<ExtendedTooltip name="ПрочитаноБайтРасширеннаяПодсказка" id="36"/>
-										</LabelField>
-										<LabelField name="КоличествоСтрок" id="40">
-											<DataPath>КоличествоСтрок</DataPath>
-											<HorizontalAlign>Left</HorizontalAlign>
-											<Width>17</Width>
-											<Format>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧН=0</v8:content>
-												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="КоличествоСтрокКонтекстноеМеню" id="41"/>
-											<ExtendedTooltip name="КоличествоСтрокРасширеннаяПодсказка" id="42"/>
-										</LabelField>
-										<LabelField name="ОбщееВремяВыполнения" id="58">
-											<DataPath>ОбщееВремяВыполнения</DataPath>
-											<HorizontalAlign>Left</HorizontalAlign>
-											<Width>17</Width>
-											<Format>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧН=0</v8:content>
-												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ОбщееВремяВыполненияКонтекстноеМеню" id="59"/>
-											<ExtendedTooltip name="ОбщееВремяВыполненияРасширеннаяПодсказка" id="60"/>
-										</LabelField>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппировкаПоказателиРасширеннаяПодсказка" id="44"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаПоказателиПерваяКолонка" id="45">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа показатели первая колонка</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа показатели первая колонка</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПоказателиПерваяКолонкаРасширеннаяПодсказка" id="46"/>
+													<ChildItems>
+														<LabelField name="СтрокПрочитано" id="31">
+															<DataPath>ПрочитаноСтрок</DataPath>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Width>17</Width>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="СтрокПрочитаноКонтекстноеМеню" id="32"/>
+															<ExtendedTooltip name="СтрокПрочитаноРасширеннаяПодсказка" id="33"/>
+														</LabelField>
+														<LabelField name="ПрочитаноБайт" id="34">
+															<DataPath>ПрочитаноБайт</DataPath>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Width>17</Width>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ПрочитаноБайтКонтекстноеМеню" id="35"/>
+															<ExtendedTooltip name="ПрочитаноБайтРасширеннаяПодсказка" id="36"/>
+														</LabelField>
+														<LabelField name="КоличествоСтрок" id="40">
+															<DataPath>КоличествоСтрок</DataPath>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Width>17</Width>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="КоличествоСтрокКонтекстноеМеню" id="41"/>
+															<ExtendedTooltip name="КоличествоСтрокРасширеннаяПодсказка" id="42"/>
+														</LabelField>
+														<LabelField name="ОбщееВремяВыполнения" id="58">
+															<DataPath>ОбщееВремяВыполнения</DataPath>
+															<HorizontalAlign>Left</HorizontalAlign>
+															<Width>17</Width>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ОбщееВремяВыполненияКонтекстноеМеню" id="59"/>
+															<ExtendedTooltip name="ОбщееВремяВыполненияРасширеннаяПодсказка" id="60"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПоказателиВтораяКолонка" id="47">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа показатели вторая колонка</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа показатели вторая колонка</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПоказателиВтораяКолонкаРасширеннаяПодсказка" id="48"/>
+													<ChildItems>
+														<LabelField name="ПрочитаноВремя" id="37">
+															<DataPath>ПрочитаноВремя</DataPath>
+															<Width>19</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ПрочитаноВремяКонтекстноеМеню" id="38"/>
+															<ExtendedTooltip name="ПрочитаноВремяРасширеннаяПодсказка" id="39"/>
+														</LabelField>
+														<LabelField name="ВремяВыполненияHTTP" id="49">
+															<DataPath>ВремяВыполненияHTTP</DataPath>
+															<Width>19</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ВремяВыполненияHTTPКонтекстноеМеню" id="50"/>
+															<ExtendedTooltip name="ВремяВыполненияHTTPРасширеннаяПодсказка" id="51"/>
+														</LabelField>
+														<LabelField name="ВремяЧтенияJSON" id="52">
+															<DataPath>ВремяЧтенияJSON</DataPath>
+															<Width>19</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ВремяЧтенияJSONКонтекстноеМеню" id="53"/>
+															<ExtendedTooltip name="ВремяЧтенияJSONРасширеннаяПодсказка" id="54"/>
+														</LabelField>
+														<LabelField name="ВремяПреобразованияJSON" id="55">
+															<DataPath>ВремяПреобразованияJSON</DataPath>
+															<Width>19</Width>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<Format>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
+																</v8:item>
+															</Format>
+															<Border width="1">
+																<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+															</Border>
+															<ContextMenu name="ВремяПреобразованияJSONКонтекстноеМеню" id="56"/>
+															<ExtendedTooltip name="ВремяПреобразованияJSONРасширеннаяПодсказка" id="57"/>
+														</LabelField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
 									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаПоказателиВтораяКолонка" id="47">
+								</Page>
+								<Page name="СтраницаПоля" id="65">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа показатели вторая колонка</v8:content>
+											<v8:content>Поля</v8:content>
 										</v8:item>
 									</Title>
 									<ToolTip>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа показатели вторая колонка</v8:content>
+											<v8:content>Страница поля</v8:content>
 										</v8:item>
 									</ToolTip>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаПоказателиВтораяКолонкаРасширеннаяПодсказка" id="48"/>
+									<ExtendedTooltip name="СтраницаПоляРасширеннаяПодсказка" id="66"/>
 									<ChildItems>
-										<LabelField name="ПрочитаноВремя" id="37">
-											<DataPath>ПрочитаноВремя</DataPath>
-											<Width>19</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<Format>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
-												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ПрочитаноВремяКонтекстноеМеню" id="38"/>
-											<ExtendedTooltip name="ПрочитаноВремяРасширеннаяПодсказка" id="39"/>
-										</LabelField>
-										<LabelField name="ВремяВыполненияHTTP" id="49">
-											<DataPath>ВремяВыполненияHTTP</DataPath>
-											<Width>19</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<Format>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
-												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ВремяВыполненияHTTPКонтекстноеМеню" id="50"/>
-											<ExtendedTooltip name="ВремяВыполненияHTTPРасширеннаяПодсказка" id="51"/>
-										</LabelField>
-										<LabelField name="ВремяЧтенияJSON" id="52">
-											<DataPath>ВремяЧтенияJSON</DataPath>
-											<Width>19</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<Format>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
-												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ВремяЧтенияJSONКонтекстноеМеню" id="53"/>
-											<ExtendedTooltip name="ВремяЧтенияJSONРасширеннаяПодсказка" id="54"/>
-										</LabelField>
-										<LabelField name="ВремяПреобразованияJSON" id="55">
-											<DataPath>ВремяПреобразованияJSON</DataPath>
-											<Width>19</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<Format>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>ЧЦ=15; ЧДЦ=10; ЧН=0</v8:content>
-												</v8:item>
-											</Format>
-											<Border width="1">
-												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
-											</Border>
-											<ContextMenu name="ВремяПреобразованияJSONКонтекстноеМеню" id="56"/>
-											<ExtendedTooltip name="ВремяПреобразованияJSONРасширеннаяПодсказка" id="57"/>
-										</LabelField>
+										<Table name="ТаблицаПолей" id="67">
+											<Representation>List</Representation>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ТаблицаПолей</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="ТаблицаПолейКонтекстноеМеню" id="68"/>
+											<AutoCommandBar name="ТаблицаПолейКоманднаяПанель" id="69"/>
+											<ExtendedTooltip name="ТаблицаПолейРасширеннаяПодсказка" id="70"/>
+											<SearchStringAddition name="ТаблицаПолейСтрокаПоиска" id="71">
+												<AdditionSource>
+													<Item>ТаблицаПолей</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаПолейСтрокаПоискаКонтекстноеМеню" id="72"/>
+												<ExtendedTooltip name="ТаблицаПолейСтрокаПоискаРасширеннаяПодсказка" id="73"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ТаблицаПолейСостояниеПросмотра" id="74">
+												<AdditionSource>
+													<Item>ТаблицаПолей</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаПолейСостояниеПросмотраКонтекстноеМеню" id="75"/>
+												<ExtendedTooltip name="ТаблицаПолейСостояниеПросмотраРасширеннаяПодсказка" id="76"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ТаблицаПолейУправлениеПоиском" id="77">
+												<AdditionSource>
+													<Item>ТаблицаПолей</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ТаблицаПолейУправлениеПоискомКонтекстноеМеню" id="78"/>
+												<ExtendedTooltip name="ТаблицаПолейУправлениеПоискомРасширеннаяПодсказка" id="79"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ТаблицаПолейНаименование" id="80">
+													<DataPath>ТаблицаПолей.Наименование</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ТаблицаПолейНаименованиеКонтекстноеМеню" id="81"/>
+													<ExtendedTooltip name="ТаблицаПолейНаименованиеРасширеннаяПодсказка" id="82"/>
+												</InputField>
+												<InputField name="ТаблицаПолейТип" id="83">
+													<DataPath>ТаблицаПолей.Тип</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<Width>8</Width>
+													<ContextMenu name="ТаблицаПолейТипКонтекстноеМеню" id="84"/>
+													<ExtendedTooltip name="ТаблицаПолейТипРасширеннаяПодсказка" id="85"/>
+												</InputField>
+											</ChildItems>
+										</Table>
 									</ChildItems>
-								</UsualGroup>
+								</Page>
 							</ChildItems>
-						</UsualGroup>
+						</Pages>
 					</ChildItems>
 				</UsualGroup>
 			</ChildItems>
@@ -363,6 +470,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="Результат" id="2">
 			<Title>
@@ -546,6 +654,72 @@
 					<v8:FractionDigits>10</v8:FractionDigits>
 					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
 				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаПолей" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица полей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Наименование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЗаполнятьПоля" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнять поля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

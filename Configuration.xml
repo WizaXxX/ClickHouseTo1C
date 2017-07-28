@@ -136,6 +136,7 @@
 			<Constant>CH_Таймаут</Constant>
 			<CommonForm>ФормаНастройкиПараметровClickHouse</CommonForm>
 			<Catalog>CH_Отчеты</Catalog>
+			<Report>ШаблонОтчета</Report>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>

@@ -11,6 +11,12 @@
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="Наименование" id="1">
 			<DataPath>Объект.Description</DataPath>
@@ -94,6 +100,9 @@
 											<VerticalStretch>true</VerticalStretch>
 											<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="9"/>
 											<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="10"/>
+											<Events>
+												<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
+											</Events>
 										</InputField>
 										<Table name="ПараметрыЗапроса" id="11">
 											<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -216,6 +225,28 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаНастройкиОтчета" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Настройки отчета</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки отчета</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаНастройкиОтчетаРасширеннаяПодсказка" id="64"/>
+					<ChildItems>
+						<Button name="КонструкторСхемыКомпоновкиДанных" id="65">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КонструкторСхемыКомпоновкиДанных</CommandName>
+							<ExtendedTooltip name="КонструкторСхемыКомпоновкиДанныхРасширеннаяПодсказка" id="66"/>
+						</Button>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -226,6 +257,21 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="СхемаКомпоновкиДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Схема компоновки данных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -249,6 +295,21 @@
 			<Action>КонсольЗапроса</Action>
 			<Representation>Picture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
+		</Command>
+		<Command name="КонструкторСхемыКомпоновкиДанных" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор схемы компоновки данных</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструктор схемы компоновки данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонструкторСхемыКомпоновкиДанных</Action>
 		</Command>
 	</Commands>
 </Form>
