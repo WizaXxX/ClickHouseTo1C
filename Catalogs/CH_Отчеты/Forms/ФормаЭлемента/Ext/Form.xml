@@ -9,12 +9,21 @@
 				<CommandName>Form.Command.КонсольЗапроса</CommandName>
 				<ExtendedTooltip name="ФормаКонсольЗапросаРасширеннаяПодсказка" id="62"/>
 			</Button>
+			<Button name="КонструкторСхемыКомпоновкиДанных" id="65">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КонструкторСхемыКомпоновкиДанных</CommandName>
+				<ExtendedTooltip name="КонструкторСхемыКомпоновкиДанныхРасширеннаяПодсказка" id="66"/>
+			</Button>
+			<Button name="ФормаОткрытьОтчет" id="67">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьОтчет</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьОтчетРасширеннаяПодсказка" id="68"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
 		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
-		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -26,229 +35,173 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
 		</InputField>
-		<Pages name="СтраницыНастройки" id="4">
+		<UsualGroup name="НастройкиCHГоризонтальнаяГруппировка" id="33">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы настройки</v8:content>
+					<v8:content>Настройки CHГоризонтальная группировка</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Страницы настройки</v8:content>
+					<v8:content>Настройки CHГоризонтальная группировка</v8:content>
 				</v8:item>
 			</ToolTip>
-			<ExtendedTooltip name="СтраницыНастройкиРасширеннаяПодсказка" id="5"/>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="НастройкиCHГоризонтальнаяГруппировкаРасширеннаяПодсказка" id="34"/>
 			<ChildItems>
-				<Page name="СтраницаНастройкиClickHouse" id="6">
+				<UsualGroup name="ГруппаКолонкаПервая" id="35">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки ClickHouse</v8:content>
+							<v8:content>Группа колонка первая</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страница настройки click house</v8:content>
+							<v8:content>Группа колонка первая</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="СтраницаНастройкиClickHouseРасширеннаяПодсказка" id="7"/>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонкаПерваяРасширеннаяПодсказка" id="36"/>
 					<ChildItems>
-						<UsualGroup name="НастройкиCHГоризонтальнаяГруппировка" id="33">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки CHГоризонтальная группировка</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Настройки CHГоризонтальная группировка</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Group>Horizontal</Group>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="НастройкиCHГоризонтальнаяГруппировкаРасширеннаяПодсказка" id="34"/>
+						<InputField name="ТекстЗапроса" id="8">
+							<DataPath>Объект.ТекстЗапроса</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<VerticalStretch>true</VerticalStretch>
+							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="10"/>
+							<Events>
+								<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Table name="ПараметрыЗапроса" id="11">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПараметрыЗапроса</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПараметрыЗапросаКонтекстноеМеню" id="12"/>
+							<AutoCommandBar name="ПараметрыЗапросаКоманднаяПанель" id="13"/>
+							<ExtendedTooltip name="ПараметрыЗапросаРасширеннаяПодсказка" id="14"/>
+							<SearchStringAddition name="ПараметрыЗапросаСтрокаПоиска" id="15">
+								<AdditionSource>
+									<Item>ПараметрыЗапроса</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыЗапросаСтрокаПоискаКонтекстноеМеню" id="16"/>
+								<ExtendedTooltip name="ПараметрыЗапросаСтрокаПоискаРасширеннаяПодсказка" id="17"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПараметрыЗапросаСостояниеПросмотра" id="18">
+								<AdditionSource>
+									<Item>ПараметрыЗапроса</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыЗапросаСостояниеПросмотраКонтекстноеМеню" id="19"/>
+								<ExtendedTooltip name="ПараметрыЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПараметрыЗапросаУправлениеПоиском" id="21">
+								<AdditionSource>
+									<Item>ПараметрыЗапроса</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПараметрыЗапросаУправлениеПоискомКонтекстноеМеню" id="22"/>
+								<ExtendedTooltip name="ПараметрыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="23"/>
+							</SearchControlAddition>
 							<ChildItems>
-								<UsualGroup name="ГруппаКолонкаПервая" id="35">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа колонка первая</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа колонка первая</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Group>Vertical</Group>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаКолонкаПерваяРасширеннаяПодсказка" id="36"/>
-									<ChildItems>
-										<InputField name="ТекстЗапроса" id="8">
-											<DataPath>Объект.ТекстЗапроса</DataPath>
-											<TitleLocation>None</TitleLocation>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<AutoMaxHeight>false</AutoMaxHeight>
-											<VerticalStretch>true</VerticalStretch>
-											<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="9"/>
-											<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="10"/>
-											<Events>
-												<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
-											</Events>
-										</InputField>
-										<Table name="ПараметрыЗапроса" id="11">
-											<AutoInsertNewRow>true</AutoInsertNewRow>
-											<EnableStartDrag>true</EnableStartDrag>
-											<EnableDrag>true</EnableDrag>
-											<DataPath>Объект.ПараметрыЗапроса</DataPath>
-											<RowFilter xsi:nil="true"/>
-											<ContextMenu name="ПараметрыЗапросаКонтекстноеМеню" id="12"/>
-											<AutoCommandBar name="ПараметрыЗапросаКоманднаяПанель" id="13"/>
-											<ExtendedTooltip name="ПараметрыЗапросаРасширеннаяПодсказка" id="14"/>
-											<SearchStringAddition name="ПараметрыЗапросаСтрокаПоиска" id="15">
-												<AdditionSource>
-													<Item>ПараметрыЗапроса</Item>
-													<Type>SearchStringRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="ПараметрыЗапросаСтрокаПоискаКонтекстноеМеню" id="16"/>
-												<ExtendedTooltip name="ПараметрыЗапросаСтрокаПоискаРасширеннаяПодсказка" id="17"/>
-											</SearchStringAddition>
-											<ViewStatusAddition name="ПараметрыЗапросаСостояниеПросмотра" id="18">
-												<AdditionSource>
-													<Item>ПараметрыЗапроса</Item>
-													<Type>ViewStatusRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="ПараметрыЗапросаСостояниеПросмотраКонтекстноеМеню" id="19"/>
-												<ExtendedTooltip name="ПараметрыЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="20"/>
-											</ViewStatusAddition>
-											<SearchControlAddition name="ПараметрыЗапросаУправлениеПоиском" id="21">
-												<AdditionSource>
-													<Item>ПараметрыЗапроса</Item>
-													<Type>SearchControl</Type>
-												</AdditionSource>
-												<ContextMenu name="ПараметрыЗапросаУправлениеПоискомКонтекстноеМеню" id="22"/>
-												<ExtendedTooltip name="ПараметрыЗапросаУправлениеПоискомРасширеннаяПодсказка" id="23"/>
-											</SearchControlAddition>
-											<ChildItems>
-												<InputField name="ПараметрыЗапросаНаименование" id="27">
-													<DataPath>Объект.ПараметрыЗапроса.Наименование</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПараметрыЗапросаНаименованиеКонтекстноеМеню" id="28"/>
-													<ExtendedTooltip name="ПараметрыЗапросаНаименованиеРасширеннаяПодсказка" id="29"/>
-												</InputField>
-												<InputField name="ПараметрыЗапросаЗначение" id="30">
-													<DataPath>Объект.ПараметрыЗапроса.Значение</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПараметрыЗапросаЗначениеКонтекстноеМеню" id="31"/>
-													<ExtendedTooltip name="ПараметрыЗапросаЗначениеРасширеннаяПодсказка" id="32"/>
-												</InputField>
-											</ChildItems>
-										</Table>
-									</ChildItems>
-								</UsualGroup>
-								<UsualGroup name="ГруппаКолонкаВторая" id="37">
-									<Title>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа колонка вторая</v8:content>
-										</v8:item>
-									</Title>
-									<ToolTip>
-										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Группа колонка вторая</v8:content>
-										</v8:item>
-									</ToolTip>
-									<Representation>None</Representation>
-									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="ГруппаКолонкаВтораяРасширеннаяПодсказка" id="38"/>
-									<ChildItems>
-										<Table name="ПоляЗапроса" id="39">
-											<AutoInsertNewRow>true</AutoInsertNewRow>
-											<EnableStartDrag>true</EnableStartDrag>
-											<EnableDrag>true</EnableDrag>
-											<DataPath>Объект.ПоляЗапроса</DataPath>
-											<RowFilter xsi:nil="true"/>
-											<ContextMenu name="ПоляЗапросаКонтекстноеМеню" id="40"/>
-											<AutoCommandBar name="ПоляЗапросаКоманднаяПанель" id="41"/>
-											<ExtendedTooltip name="ПоляЗапросаРасширеннаяПодсказка" id="42"/>
-											<SearchStringAddition name="ПоляЗапросаСтрокаПоиска" id="43">
-												<AdditionSource>
-													<Item>ПоляЗапроса</Item>
-													<Type>SearchStringRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="ПоляЗапросаСтрокаПоискаКонтекстноеМеню" id="44"/>
-												<ExtendedTooltip name="ПоляЗапросаСтрокаПоискаРасширеннаяПодсказка" id="45"/>
-											</SearchStringAddition>
-											<ViewStatusAddition name="ПоляЗапросаСостояниеПросмотра" id="46">
-												<AdditionSource>
-													<Item>ПоляЗапроса</Item>
-													<Type>ViewStatusRepresentation</Type>
-												</AdditionSource>
-												<ContextMenu name="ПоляЗапросаСостояниеПросмотраКонтекстноеМеню" id="47"/>
-												<ExtendedTooltip name="ПоляЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
-											</ViewStatusAddition>
-											<SearchControlAddition name="ПоляЗапросаУправлениеПоиском" id="49">
-												<AdditionSource>
-													<Item>ПоляЗапроса</Item>
-													<Type>SearchControl</Type>
-												</AdditionSource>
-												<ContextMenu name="ПоляЗапросаУправлениеПоискомКонтекстноеМеню" id="50"/>
-												<ExtendedTooltip name="ПоляЗапросаУправлениеПоискомРасширеннаяПодсказка" id="51"/>
-											</SearchControlAddition>
-											<ChildItems>
-												<InputField name="ПоляЗапросаНаименование" id="55">
-													<DataPath>Объект.ПоляЗапроса.Наименование</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПоляЗапросаНаименованиеКонтекстноеМеню" id="56"/>
-													<ExtendedTooltip name="ПоляЗапросаНаименованиеРасширеннаяПодсказка" id="57"/>
-												</InputField>
-												<InputField name="ПоляЗапросаТип" id="58">
-													<DataPath>Объект.ПоляЗапроса.Тип</DataPath>
-													<EditMode>EnterOnInput</EditMode>
-													<ContextMenu name="ПоляЗапросаТипКонтекстноеМеню" id="59"/>
-													<ExtendedTooltip name="ПоляЗапросаТипРасширеннаяПодсказка" id="60"/>
-												</InputField>
-											</ChildItems>
-										</Table>
-									</ChildItems>
-								</UsualGroup>
+								<InputField name="ПараметрыЗапросаНаименование" id="27">
+									<DataPath>Объект.ПараметрыЗапроса.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыЗапросаНаименованиеКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="ПараметрыЗапросаНаименованиеРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="ПараметрыЗапросаЗначение" id="30">
+									<DataPath>1/0:6afcd226-b740-4566-b624-7e7d5e7525ef/0:97bd97ca-0b76-44b3-9740-45883c33c901</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПараметрыЗапросаЗначениеКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ПараметрыЗапросаЗначениеРасширеннаяПодсказка" id="32"/>
+								</InputField>
 							</ChildItems>
-						</UsualGroup>
+						</Table>
 					</ChildItems>
-				</Page>
-				<Page name="СтраницаНастройкиОтчета" id="63">
+				</UsualGroup>
+				<UsualGroup name="ГруппаКолонкаВторая" id="37">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Настройки отчета</v8:content>
+							<v8:content>Группа колонка вторая</v8:content>
 						</v8:item>
 					</Title>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Страница настройки отчета</v8:content>
+							<v8:content>Группа колонка вторая</v8:content>
 						</v8:item>
 					</ToolTip>
-					<ExtendedTooltip name="СтраницаНастройкиОтчетаРасширеннаяПодсказка" id="64"/>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКолонкаВтораяРасширеннаяПодсказка" id="38"/>
 					<ChildItems>
-						<Button name="КонструкторСхемыКомпоновкиДанных" id="65">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.КонструкторСхемыКомпоновкиДанных</CommandName>
-							<ExtendedTooltip name="КонструкторСхемыКомпоновкиДанныхРасширеннаяПодсказка" id="66"/>
-						</Button>
+						<Table name="ПоляЗапроса" id="39">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ПоляЗапроса</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПоляЗапросаКонтекстноеМеню" id="40"/>
+							<AutoCommandBar name="ПоляЗапросаКоманднаяПанель" id="41"/>
+							<ExtendedTooltip name="ПоляЗапросаРасширеннаяПодсказка" id="42"/>
+							<SearchStringAddition name="ПоляЗапросаСтрокаПоиска" id="43">
+								<AdditionSource>
+									<Item>ПоляЗапроса</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоляЗапросаСтрокаПоискаКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="ПоляЗапросаСтрокаПоискаРасширеннаяПодсказка" id="45"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПоляЗапросаСостояниеПросмотра" id="46">
+								<AdditionSource>
+									<Item>ПоляЗапроса</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоляЗапросаСостояниеПросмотраКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="ПоляЗапросаСостояниеПросмотраРасширеннаяПодсказка" id="48"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПоляЗапросаУправлениеПоиском" id="49">
+								<AdditionSource>
+									<Item>ПоляЗапроса</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПоляЗапросаУправлениеПоискомКонтекстноеМеню" id="50"/>
+								<ExtendedTooltip name="ПоляЗапросаУправлениеПоискомРасширеннаяПодсказка" id="51"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПоляЗапросаНаименование" id="55">
+									<DataPath>Объект.ПоляЗапроса.Наименование</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПоляЗапросаНаименованиеКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="ПоляЗапросаНаименованиеРасширеннаяПодсказка" id="57"/>
+								</InputField>
+								<InputField name="ПоляЗапросаТип" id="58">
+									<DataPath>Объект.ПоляЗапроса.Тип</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПоляЗапросаТипКонтекстноеМеню" id="59"/>
+									<ExtendedTooltip name="ПоляЗапросаТипРасширеннаяПодсказка" id="60"/>
+								</InputField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
-				</Page>
+				</UsualGroup>
 			</ChildItems>
-		</Pages>
+		</UsualGroup>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -294,7 +247,6 @@
 			</Picture>
 			<Action>КонсольЗапроса</Action>
 			<Representation>Picture</Representation>
-			<ModifiesSavedData>true</ModifiesSavedData>
 		</Command>
 		<Command name="КонструкторСхемыКомпоновкиДанных" id="2">
 			<Title>
@@ -309,7 +261,30 @@
 					<v8:content>Конструктор схемы компоновки данных</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>КонструкторСхемыКомпоновкиДанных</Action>
+		</Command>
+		<Command name="ОткрытьОтчет" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчет</Action>
 		</Command>
 	</Commands>
 </Form>

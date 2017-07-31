@@ -30,6 +30,7 @@
 				<xr:Item xsi:type="xr:MDObjectRef">Constant.CH_Таймаут</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаНастройкиПараметровClickHouse</xr:Item>
 				<xr:Item xsi:type="xr:MDObjectRef">CommonCommand.КонсольЗапроса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.КольцоПрогресса</xr:Item>
 			</Content>
 		</Properties>
 		<ChildObjects/>

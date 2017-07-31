@@ -125,6 +125,7 @@
 			<Language>Русский</Language>
 			<Subsystem>ВзаимодействиеСlickHouse</Subsystem>
 			<CommonPicture>ClickHouse</CommonPicture>
+			<CommonPicture>КольцоПрогресса</CommonPicture>
 			<CommonModule>КликХаусСервер</CommonModule>
 			<CommonCommand>ПроверкаСоединения</CommonCommand>
 			<CommonCommand>КонсольЗапроса</CommonCommand>
@@ -136,7 +137,9 @@
 			<Constant>CH_Таймаут</Constant>
 			<CommonForm>ФормаНастройкиПараметровClickHouse</CommonForm>
 			<Catalog>CH_Отчеты</Catalog>
+			<Catalog>Справочник1</Catalog>
 			<Report>ШаблонОтчета</Report>
+			<DataProcessor>УниверсальныйОтчетClickHouse</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
