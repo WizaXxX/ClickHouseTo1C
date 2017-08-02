@@ -14,11 +14,6 @@
 				<CommandName>Form.Command.КонструкторСхемыКомпоновкиДанных</CommandName>
 				<ExtendedTooltip name="КонструкторСхемыКомпоновкиДанныхРасширеннаяПодсказка" id="66"/>
 			</Button>
-			<Button name="ФормаОткрытьОтчет" id="67">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ОткрытьОтчет</CommandName>
-				<ExtendedTooltip name="ФормаОткрытьОтчетРасширеннаяПодсказка" id="68"/>
-			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -266,25 +261,6 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КонструкторСхемыКомпоновкиДанных</Action>
-		</Command>
-		<Command name="ОткрытьОтчет" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть отчет</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть отчет</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Report</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
-			<Action>ОткрытьОтчет</Action>
 		</Command>
 	</Commands>
 </Form>
