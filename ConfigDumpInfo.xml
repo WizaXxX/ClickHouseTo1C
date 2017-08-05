@@ -12,8 +12,8 @@
 			<Metadata name="Catalog.CH_Отчеты.Attribute.ТекстЗапроса" id="c3389f32-47c3-45eb-aebd-be21ab1c1926"/>
 		</Metadata>
 		<Metadata name="Catalog.CH_Отчеты.Command.ОткрытьОтчет.CommandModule" id="ab14e945-3ee6-4633-9880-3a7cba795960.2" configVersion="7478d32225068946ac5d1bf869adf29600000000"/>
-		<Metadata name="Catalog.CH_Отчеты.Form.КонсольЗапроса" id="346c1f31-37a5-452e-8603-888ad11accee" configVersion="cbbc19a612655a498422649d34d7d45e00000000"/>
-		<Metadata name="Catalog.CH_Отчеты.Form.КонсольЗапроса.Form" id="346c1f31-37a5-452e-8603-888ad11accee.0" configVersion="8b0d30fc91df8343b2a35285bad25b0300000000"/>
+		<Metadata name="Catalog.CH_Отчеты.Form.КонсольЗапроса" id="346c1f31-37a5-452e-8603-888ad11accee" configVersion="8dd962b1ba1763449c1260965c54476100000000"/>
+		<Metadata name="Catalog.CH_Отчеты.Form.КонсольЗапроса.Form" id="346c1f31-37a5-452e-8603-888ad11accee.0" configVersion="885e74c71ffe654e8d2a035a0bedb00d00000000"/>
 		<Metadata name="Catalog.CH_Отчеты.Form.ФормаЭлемента" id="987d5eba-9581-42d1-901b-c743712c6549" configVersion="e089c14222bc8a449a21db3c0e2a63a300000000"/>
 		<Metadata name="Catalog.CH_Отчеты.Form.ФормаЭлемента.Form" id="987d5eba-9581-42d1-901b-c743712c6549.0" configVersion="7697e6df4be3bb4b820c20982730be2800000000"/>
 		<Metadata name="Catalog.CH_Отчеты.Template.МакетРезультат" id="1badac2c-d118-4712-b46a-27d3fdc8c35a" configVersion="458fef8713269c4ebbad16163263678500000000"/>
@@ -23,15 +23,17 @@
 		<Metadata name="CommonCommand.КонсольЗапроса.CommandModule" id="f32b9716-8de0-4b2b-a4a2-f7ab486efc16.2" configVersion="c24db8f900c94b40aa70aba9282c2f8f00000000"/>
 		<Metadata name="CommonCommand.ПроверкаСоединения" id="97a51628-a2c5-4466-b0f9-d9e37d250841" configVersion="9b13a4f9eaf9c54a8f0133c808d457a800000000"/>
 		<Metadata name="CommonCommand.ПроверкаСоединения.CommandModule" id="97a51628-a2c5-4466-b0f9-d9e37d250841.2" configVersion="c2e064934be0bf448fbf34f8f4bcba0d00000000"/>
+		<Metadata name="CommonForm.ФормаВыбораТипаЗначения" id="addd8483-dc5c-4e11-b8fe-7f3964441d84" configVersion="ca2b37c27b34a147b6086b83501587fd00000000"/>
+		<Metadata name="CommonForm.ФормаВыбораТипаЗначения.Form" id="addd8483-dc5c-4e11-b8fe-7f3964441d84.0" configVersion="adc13efa818a9b448c8f4197a4e4c5cf00000000"/>
 		<Metadata name="CommonForm.ФормаНастройкиПараметровClickHouse" id="2f06bf47-ee57-460b-bb03-3d210aa9eb4b" configVersion="a607664ac700c3429bd5950d8c52e5d500000000"/>
 		<Metadata name="CommonForm.ФормаНастройкиПараметровClickHouse.Form" id="2f06bf47-ee57-460b-bb03-3d210aa9eb4b.0" configVersion="e807ed79789ffe4a95376f1646d0f3d100000000"/>
-		<Metadata name="CommonModule.КликХаусСервер" id="1f58e573-60ae-44f8-92f4-c85d05dcca3a" configVersion="83cff6a94c354642877169f0b10e652f00000000"/>
-		<Metadata name="CommonModule.КликХаусСервер.Module" id="1f58e573-60ae-44f8-92f4-c85d05dcca3a.0" configVersion="d57a8706f2c28f44b9f3d813986f5f7600000000"/>
+		<Metadata name="CommonModule.КликХаусСервер" id="1f58e573-60ae-44f8-92f4-c85d05dcca3a" configVersion="e684330b72e80d46803c53b52f89442100000000"/>
+		<Metadata name="CommonModule.КликХаусСервер.Module" id="1f58e573-60ae-44f8-92f4-c85d05dcca3a.0" configVersion="fc20373fd661a94c92f0205b638ada3000000000"/>
 		<Metadata name="CommonPicture.ClickHouse" id="b9c1f8b2-4987-44ba-ab7f-d3aebbb8a934" configVersion="5e5334e1653c2f46a98723737db9bd3b00000000"/>
 		<Metadata name="CommonPicture.ClickHouse.Picture" id="b9c1f8b2-4987-44ba-ab7f-d3aebbb8a934.0" configVersion="3381a2c6c12b894a8dfb8c2ba2b8c32a00000000"/>
 		<Metadata name="CommonPicture.КольцоПрогресса" id="3d70ea94-5b4f-4a3e-a47f-d304427d3e0b" configVersion="72b2c97f17ed1c49b34b2c5f5af6a59d00000000"/>
 		<Metadata name="CommonPicture.КольцоПрогресса.Picture" id="3d70ea94-5b4f-4a3e-a47f-d304427d3e0b.0" configVersion="e762e2cdfb46cf4b82f32c245d9b157300000000"/>
-		<Metadata name="Configuration.ClickHouseConf" id="798b4418-f811-49c5-a125-ff1e4102d4fa" configVersion="95c2ea168941f142933eb16306cee28c00000000"/>
+		<Metadata name="Configuration.ClickHouseConf" id="798b4418-f811-49c5-a125-ff1e4102d4fa" configVersion="1c7dd09cda18d44bae4a010d651f97eb00000000"/>
 		<Metadata name="Configuration.ClickHouseConf.ClientApplicationInterface" id="f1541eb9-084e-4f18-9391-e9a9f7e6e139.b" configVersion="6d899eac0bb73349adc8fbbc2888eeed00000000"/>
 		<Metadata name="Constant.CH_АдресСервера" id="c2ab4abc-5e46-4c51-a2b4-45d2c6512009" configVersion="703d10abf7717849a8898c47cc93c13500000000"/>
 		<Metadata name="Constant.CH_АдресСервера.ValueManagerModule" id="c2ab4abc-5e46-4c51-a2b4-45d2c6512009.0" configVersion="41df620d94c57845ad25bf557bac88f800000000"/>

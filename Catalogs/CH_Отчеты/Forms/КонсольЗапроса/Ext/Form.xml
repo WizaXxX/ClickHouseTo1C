@@ -458,6 +458,7 @@
 									<ChildItems>
 										<Table name="ТаблицаПараметров" id="91">
 											<Representation>List</Representation>
+											<Visible>false</Visible>
 											<AutoInsertNewRow>true</AutoInsertNewRow>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
@@ -504,6 +505,54 @@
 													<ExtendedTooltip name="ТаблицаПараметровЗначениеРасширеннаяПодсказка" id="109"/>
 												</InputField>
 											</ChildItems>
+										</Table>
+										<Table name="КомпоновщикНастроекНастройкиПараметрыДанных" id="110">
+											<Representation>Tree</Representation>
+											<Autofill>true</Autofill>
+											<Width>50</Width>
+											<InitialTreeView>ExpandAllLevels</InitialTreeView>
+											<DataPath>КомпоновщикНастроек.Settings.DataParameters</DataPath>
+											<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхКонтекстноеМеню" id="111"/>
+											<AutoCommandBar name="КомпоновщикНастроекНастройкиПараметрыДанныхКоманднаяПанель" id="112">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="КомпоновщикНастроекНастройкиПараметрыДанныхДобавитьПараметры" id="123">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ДобавитьПараметры</CommandName>
+														<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхДобавитьПараметрыРасширеннаяПодсказка" id="124"/>
+													</Button>
+													<Button name="КомпоновщикНастроекНастройкиПараметрыДанныхУдалитьПараметр" id="125">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.УдалитьПараметр</CommandName>
+														<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхУдалитьПараметрРасширеннаяПодсказка" id="126"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхРасширеннаяПодсказка" id="113"/>
+											<SearchStringAddition name="КомпоновщикНастроекНастройкиПараметрыДанныхСтрокаПоиска" id="114">
+												<AdditionSource>
+													<Item>КомпоновщикНастроекНастройкиПараметрыДанных</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхСтрокаПоискаКонтекстноеМеню" id="115"/>
+												<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхСтрокаПоискаРасширеннаяПодсказка" id="116"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="КомпоновщикНастроекНастройкиПараметрыДанныхСостояниеПросмотра" id="117">
+												<AdditionSource>
+													<Item>КомпоновщикНастроекНастройкиПараметрыДанных</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхСостояниеПросмотраКонтекстноеМеню" id="118"/>
+												<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхСостояниеПросмотраРасширеннаяПодсказка" id="119"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="КомпоновщикНастроекНастройкиПараметрыДанныхУправлениеПоиском" id="120">
+												<AdditionSource>
+													<Item>КомпоновщикНастроекНастройкиПараметрыДанных</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="КомпоновщикНастроекНастройкиПараметрыДанныхУправлениеПоискомКонтекстноеМеню" id="121"/>
+												<ExtendedTooltip name="КомпоновщикНастроекНастройкиПараметрыДанныхУправлениеПоискомРасширеннаяПодсказка" id="122"/>
+											</SearchControlAddition>
 										</Table>
 									</ChildItems>
 								</Page>
@@ -825,6 +874,41 @@
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="КомпоновщикНастроек" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Компоновщик настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит1" id="18">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресСКД" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес СКД</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПеренестиВОтчет" id="1">
@@ -911,6 +995,36 @@
 			</Picture>
 			<Action>ПолучитьОписаниеТаблицы</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДобавитьПараметры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить параметры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПараметры</Action>
+		</Command>
+		<Command name="УдалитьПараметр" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить параметр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьПараметр</Action>
 		</Command>
 	</Commands>
 </Form>

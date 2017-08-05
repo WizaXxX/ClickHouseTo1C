@@ -136,6 +136,7 @@
 			<Constant>CH_ЗащищенноеСоединение</Constant>
 			<Constant>CH_Таймаут</Constant>
 			<CommonForm>ФормаНастройкиПараметровClickHouse</CommonForm>
+			<CommonForm>ФормаВыбораТипаЗначения</CommonForm>
 			<Catalog>CH_Отчеты</Catalog>
 			<Catalog>Справочник1</Catalog>
 			<Report>ШаблонОтчета</Report>
