@@ -62,7 +62,6 @@
 					<ExtendedTooltip name="ТипРасширеннаяПодсказка" id="3"/>
 					<Events>
 						<Event name="OnChange">ТипПриИзменении</Event>
-						<Event name="StartChoice">ТипНачалоВыбора</Event>
 						<Event name="StartListChoice">ТипНачалоВыбораИзСписка</Event>
 					</Events>
 				</InputField>

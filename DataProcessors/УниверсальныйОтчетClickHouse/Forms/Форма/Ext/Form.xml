@@ -157,6 +157,112 @@
 								</Table>
 							</ChildItems>
 						</Page>
+						<Page name="НастройкаСортировки" id="66">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сортировка</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка сортировки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="НастройкаСортировкиРасширеннаяПодсказка" id="67"/>
+							<ChildItems>
+								<Table name="КомпоновщикНастроекНастройкиПорядок" id="81">
+									<Representation>List</Representation>
+									<Autofill>true</Autofill>
+									<Width>60</Width>
+									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>КомпоновщикНастроек.Settings.Order</DataPath>
+									<ContextMenu name="КомпоновщикНастроекНастройкиПорядокКонтекстноеМеню" id="82"/>
+									<AutoCommandBar name="КомпоновщикНастроекНастройкиПорядокКоманднаяПанель" id="83"/>
+									<ExtendedTooltip name="КомпоновщикНастроекНастройкиПорядокРасширеннаяПодсказка" id="84"/>
+									<SearchStringAddition name="КомпоновщикНастроекНастройкиПорядокСтрокаПоиска" id="85">
+										<AdditionSource>
+											<Item>КомпоновщикНастроекНастройкиПорядок</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомпоновщикНастроекНастройкиПорядокСтрокаПоискаКонтекстноеМеню" id="86"/>
+										<ExtendedTooltip name="КомпоновщикНастроекНастройкиПорядокСтрокаПоискаРасширеннаяПодсказка" id="87"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КомпоновщикНастроекНастройкиПорядокСостояниеПросмотра" id="88">
+										<AdditionSource>
+											<Item>КомпоновщикНастроекНастройкиПорядок</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомпоновщикНастроекНастройкиПорядокСостояниеПросмотраКонтекстноеМеню" id="89"/>
+										<ExtendedTooltip name="КомпоновщикНастроекНастройкиПорядокСостояниеПросмотраРасширеннаяПодсказка" id="90"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КомпоновщикНастроекНастройкиПорядокУправлениеПоиском" id="91">
+										<AdditionSource>
+											<Item>КомпоновщикНастроекНастройкиПорядок</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КомпоновщикНастроекНастройкиПорядокУправлениеПоискомКонтекстноеМеню" id="92"/>
+										<ExtendedTooltip name="КомпоновщикНастроекНастройкиПорядокУправлениеПоискомРасширеннаяПодсказка" id="93"/>
+									</SearchControlAddition>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="НастройкаУсловноеОформление" id="94">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условное оформление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройка условное оформление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="НастройкаУсловноеОформлениеРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<Table name="КомпоновщикНастроекНастройкиУсловноеОформление" id="96">
+									<Representation>List</Representation>
+									<Autofill>true</Autofill>
+									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>КомпоновщикНастроек.Settings.ConditionalAppearance</DataPath>
+									<SettingsNamedItemDetailedRepresentation>false</SettingsNamedItemDetailedRepresentation>
+									<ContextMenu name="КомпоновщикНастроекНастройкиУсловноеОформлениеКонтекстноеМеню" id="97"/>
+									<AutoCommandBar name="КомпоновщикНастроекНастройкиУсловноеОформлениеКоманднаяПанель" id="98"/>
+									<ExtendedTooltip name="КомпоновщикНастроекНастройкиУсловноеОформлениеРасширеннаяПодсказка" id="99"/>
+									<SearchStringAddition name="КомпоновщикНастроекНастройкиУсловноеОформлениеСтрокаПоиска" id="100">
+										<AdditionSource>
+											<Item>КомпоновщикНастроекНастройкиУсловноеОформление</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомпоновщикНастроекНастройкиУсловноеОформлениеСтрокаПоискаКонтекстноеМеню" id="101"/>
+										<ExtendedTooltip name="КомпоновщикНастроекНастройкиУсловноеОформлениеСтрокаПоискаРасширеннаяПодсказка" id="102"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="КомпоновщикНастроекНастройкиУсловноеОформлениеСостояниеПросмотра" id="103">
+										<AdditionSource>
+											<Item>КомпоновщикНастроекНастройкиУсловноеОформление</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="КомпоновщикНастроекНастройкиУсловноеОформлениеСостояниеПросмотраКонтекстноеМеню" id="104"/>
+										<ExtendedTooltip name="КомпоновщикНастроекНастройкиУсловноеОформлениеСостояниеПросмотраРасширеннаяПодсказка" id="105"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="КомпоновщикНастроекНастройкиУсловноеОформлениеУправлениеПоиском" id="106">
+										<AdditionSource>
+											<Item>КомпоновщикНастроекНастройкиУсловноеОформление</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="КомпоновщикНастроекНастройкиУсловноеОформлениеУправлениеПоискомКонтекстноеМеню" id="107"/>
+										<ExtendedTooltip name="КомпоновщикНастроекНастройкиУсловноеОформлениеУправлениеПоискомРасширеннаяПодсказка" id="108"/>
+									</SearchControlAddition>
+								</Table>
+							</ChildItems>
+						</Page>
 					</ChildItems>
 				</Pages>
 			</ChildItems>

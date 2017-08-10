@@ -44,6 +44,7 @@
 					<AutoMaxWidth>false</AutoMaxWidth>
 					<HorizontalStretch>true</HorizontalStretch>
 					<MultiLine>true</MultiLine>
+					<ExtendedEdit>true</ExtendedEdit>
 					<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="4"/>
 					<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="5"/>
 				</InputField>

@@ -139,7 +139,6 @@
 			<CommonForm>ФормаВыбораТипаЗначения</CommonForm>
 			<Catalog>CH_Отчеты</Catalog>
 			<Catalog>Справочник1</Catalog>
-			<Report>ШаблонОтчета</Report>
 			<DataProcessor>УниверсальныйОтчетClickHouse</DataProcessor>
 		</ChildObjects>
 	</Configuration>

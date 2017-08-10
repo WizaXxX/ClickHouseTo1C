@@ -74,9 +74,6 @@
 							<VerticalStretch>true</VerticalStretch>
 							<ContextMenu name="ТекстЗапросаКонтекстноеМеню" id="9"/>
 							<ExtendedTooltip name="ТекстЗапросаРасширеннаяПодсказка" id="10"/>
-							<Events>
-								<Event name="OnChange">ТекстЗапросаПриИзменении</Event>
-							</Events>
 						</InputField>
 						<Table name="ПараметрыЗапроса" id="11">
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -117,12 +114,6 @@
 									<EditMode>EnterOnInput</EditMode>
 									<ContextMenu name="ПараметрыЗапросаНаименованиеКонтекстноеМеню" id="28"/>
 									<ExtendedTooltip name="ПараметрыЗапросаНаименованиеРасширеннаяПодсказка" id="29"/>
-								</InputField>
-								<InputField name="ПараметрыЗапросаЗначение" id="30">
-									<DataPath>1/0:6afcd226-b740-4566-b624-7e7d5e7525ef/0:97bd97ca-0b76-44b3-9740-45883c33c901</DataPath>
-									<EditMode>EnterOnInput</EditMode>
-									<ContextMenu name="ПараметрыЗапросаЗначениеКонтекстноеМеню" id="31"/>
-									<ExtendedTooltip name="ПараметрыЗапросаЗначениеРасширеннаяПодсказка" id="32"/>
 								</InputField>
 							</ChildItems>
 						</Table>
